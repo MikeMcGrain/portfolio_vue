@@ -4,13 +4,22 @@
       <TwitterApp />
     </div>
     <div>
+      <RecRead />
+    </div>
+    <div>
       <ExpenseTracker />
     </div>
     <div>
-      <QuizComponent />
+      <Snake />
     </div>
     <div>
-      <RecRead />
+      <BNC />
+    </div>
+    <div>
+      <Calculator />
+    </div>
+    <div>
+      <QuizComponent />
     </div>
   </div>
 </template>
@@ -18,16 +27,22 @@
 <script>
 import TwitterApp from "@/components/TwitterApp";
 import ExpenseTracker from "@/components/ExpenseTracker";
+import Snake from "@/components/Snake";
+import Calculator from "@/components/Calculator";
 import QuizComponent from "@/components/QuizComponent";
 import RecRead from "@/components/RecRead";
+import BNC from "@/components/BNC"
 
 export default {
   name: "work",
   components: {
     TwitterApp,
-    QuizComponent,
     ExpenseTracker,
-    RecRead
+    Snake,
+    Calculator,
+    QuizComponent,
+    RecRead,
+    BNC
   }
 };
 </script>
