@@ -7,25 +7,37 @@
       <v-expansion-panel>
         <v-expansion-panel-header>Click to view book list</v-expansion-panel-header>
         <v-expansion-panel-content>
-
           <v-list>
             <v-list-item v-for="(book, index) in allBooks" :key="index">
               <v-list-item-content>
                 <v-list-item-title>{{ book.title }} by {{ book.author }}</v-list-item-title>
                 <v-list-item-subtitle>{{book.category}}</v-list-item-subtitle>
               </v-list-item-content>
-                <v-btn icon @click="openBookEditForm(index)"><v-icon>mdi-pencil</v-icon></v-btn>
-                <v-btn icon @click="deleteBook(index)"><v-icon>mdi-delete</v-icon></v-btn>
+              <v-btn icon @click="openBookEditForm(index)">
+                <v-icon>mdi-pencil</v-icon>
+              </v-btn>
+              <v-btn icon @click="deleteBook(index)">
+                <v-icon>mdi-delete</v-icon>
+              </v-btn>
             </v-list-item>
-  
+
             <v-tooltip left>
               <template v-slot:activator="{ on }">
-                <v-btn @click.stop="openNewBookForm" v-on="on" fab absolute bottom right color="primary"><v-icon>mdi-plus</v-icon></v-btn>
+                <v-btn
+                  @click.stop="openNewBookForm"
+                  v-on="on"
+                  fab
+                  absolute
+                  bottom
+                  right
+                  color="primary"
+                >
+                  <v-icon>mdi-plus</v-icon>
+                </v-btn>
               </template>
               <span>Add book</span>
             </v-tooltip>
           </v-list>
-
         </v-expansion-panel-content>
       </v-expansion-panel>
     </v-expansion-panels>
@@ -39,7 +51,7 @@
           <v-text-field label="Category" v-model="category" :rules="categoryRules"></v-text-field>
           <v-btn @click="submitNewBook" mt-3>Submit</v-btn>
           <v-btn @click="resetForm" mt-3 small>Reset Form</v-btn>
-        </v-form>   
+        </v-form>
         <v-card-actions>
           <div class="flex-grow-1"></div>
           <v-btn text @click="dialog=false">Cancel</v-btn>
@@ -56,78 +68,100 @@
           <v-text-field label="Change category to:" v-model="category" :rules="categoryRules"></v-text-field>
           <v-btn @click="submitBookEdit" mt-3>Submit</v-btn>
           <v-btn @click="resetForm" mt-3 small>Reset Form</v-btn>
-        </v-form>   
+        </v-form>
         <v-card-actions>
           <div class="flex-grow-1"></div>
           <v-btn text @click="dialog2=false">Cancel</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
-
   </v-card>
 </template>
 
 <script>
-import axios from 'axios'
+import axios from "axios";
 export default {
-  name: 'RecRead',
+  name: "RecRead",
   data() {
     return {
-      title: '',
-      author: '',
-      category: '',
+      title: "",
+      author: "",
+      category: "",
       allBooks: [],
-      titleRules: [v => !!v || 'Title is required'],
-      authorRules: [v => !!v || 'Author is required'],
-      categoryRules: [v => !!v || 'Category is required'],
+      titleRules: [v => !!v || "Title is required"],
+      authorRules: [v => !!v || "Author is required"],
+      categoryRules: [v => !!v || "Category is required"],
       dialog: false,
       dialog2: false,
-      bookID: '',
-      panel: false
-    }
+      bookID: "",
+      panel: true
+    };
   },
   methods: {
     resetForm() {
-      this.$refs.form.reset()
-      this.$refs.form2.reset()
+      this.$refs.form.reset();
+      this.$refs.form2.reset();
     },
     openNewBookForm() {
-      if(this.title != '') {
-        this.resetForm()
+      if (this.title != "") {
+        this.resetForm();
       }
-      this.dialog=true
+      this.dialog = true;
     },
     submitNewBook() {
-      if(this.$refs.form.validate()) {
-        axios.post('http://mikemcgrain.com:3000/books', {title: this.title, author: this.author, category: this.category})
-            .then(() => {axios.get('http://mikemcgrain.com:3000/books').then(res => {this.allBooks = res.data})})
-        this.dialog = false
+      if (this.$refs.form.validate()) {
+        axios
+          .post("http://mikemcgrain.com:3000/books", {
+            title: this.title,
+            author: this.author,
+            category: this.category
+          })
+          .then(() => {
+            axios.get("http://mikemcgrain.com:3000/books").then(res => {
+              this.allBooks = res.data;
+            });
+          });
+        this.dialog = false;
       }
     },
     openBookEditForm(index) {
-      this.dialog2 = true
-      this.title = this.allBooks[index].title,
-      this.author = this.allBooks[index].author,
-      this.category = this.allBooks[index].category
-      this.bookID = this.allBooks[index]._id
+      this.dialog2 = true;
+      (this.title = this.allBooks[index].title),
+        (this.author = this.allBooks[index].author),
+        (this.category = this.allBooks[index].category);
+      this.bookID = this.allBooks[index]._id;
     },
     submitBookEdit() {
-      if(this.$refs.form2.validate()) {
-        axios.put("http://mikemcgrain.com:3000/books/" + this.bookID, {title: this.title, author: this.author,category: this.category})
-            .then(() => {axios.get('http://mikemcgrain.com:3000/books').then(res => {this.allBooks = res.data})}) 
+      if (this.$refs.form2.validate()) {
+        axios
+          .put("http://mikemcgrain.com:3000/books/" + this.bookID, {
+            title: this.title,
+            author: this.author,
+            category: this.category
+          })
+          .then(() => {
+            axios.get("http://mikemcgrain.com:3000/books").then(res => {
+              this.allBooks = res.data;
+            });
+          });
 
-        this.dialog2 = false
+        this.dialog2 = false;
       }
     },
     deleteBook(index) {
-      axios.delete(`http://159.65.231.85:3000/books/${this.allBooks[index]._id}`)
-          .then(() => {axios.get('http://mikemcgrain.com:3000/books').then(res => {this.allBooks = res.data})}) 
-    }  
+      axios
+        .delete(`http://159.65.231.85:3000/books/${this.allBooks[index]._id}`)
+        .then(() => {
+          axios.get("http://mikemcgrain.com:3000/books").then(res => {
+            this.allBooks = res.data;
+          });
+        });
+    }
   },
   mounted: function() {
-    axios
-    .get('http://mikemcgrain.com:3000/books')
-    .then(res => {this.allBooks = res.data}) 
+    axios.get("http://mikemcgrain.com:3000/books").then(res => {
+      this.allBooks = res.data;
+    });
   }
-}
+};
 </script>
