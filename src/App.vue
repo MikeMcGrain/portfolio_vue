@@ -18,3 +18,9 @@ export default {
   data: () => ({})
 };
 </script>
+
+<style>
+#app {
+  background-color: var(--v-background-base);
+}
+</style>
