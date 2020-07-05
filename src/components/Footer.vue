@@ -2,7 +2,6 @@
   <footer>
     <v-footer color="primary" app>
       <v-spacer></v-spacer>
-
       <v-tooltip top>
         <template v-slot:activator="{ on, attrs }">
           <v-icon
@@ -16,7 +15,6 @@
         </template>
         <span>LinkedIn</span>
       </v-tooltip>
-
       <v-tooltip top>
         <template v-slot:activator="{ on, attrs }">
           <v-icon
@@ -30,14 +28,20 @@
         </template>
         <span>Resume</span>
       </v-tooltip>
-
       <v-tooltip top>
         <template v-slot:activator="{ on, attrs }">
-          <v-icon @click="openGitHub" class="icon" x-large dark v-bind="attrs" v-on="on">mdi-github</v-icon>
+          <v-icon 
+            @click="openGitHub" 
+            class="icon" 
+            x-large 
+            dark 
+            v-bind="attrs" 
+            v-on="on"
+            >mdi-github
+          </v-icon>
         </template>
         <span>GitHub</span>
       </v-tooltip>
-
       <span id="copyright" class="white--text">&copy; 2019</span>
     </v-footer>
   </footer>

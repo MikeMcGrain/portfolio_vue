@@ -1,5 +1,5 @@
 <template>
-  <v-card raised max-width="500">
+  <v-card raised>
     <v-img class="white--text align-end" src="../assets/twitterApp1.png">
       <v-card-title>Tweet Find</v-card-title>
     </v-img>

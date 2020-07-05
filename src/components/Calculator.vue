@@ -1,5 +1,5 @@
 <template>
-  <v-card raised max-width="500">
+  <v-card raised>
     <v-img class="white--text align-end" src="../assets/calculator.png">
       <v-card-title>JS Calculator</v-card-title>
     </v-img>

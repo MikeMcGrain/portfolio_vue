@@ -1,5 +1,5 @@
 <template>
-  <v-card raised max-width="500">
+  <v-card raised>
     <v-img class="white--text align-end" src="../assets/bnc1.png">
       <v-card-title>Bear, Ninja, Cowboy!</v-card-title>
     </v-img>

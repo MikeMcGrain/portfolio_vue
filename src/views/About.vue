@@ -14,7 +14,7 @@
 }
 
 div {
-  margin: 40px;
+  margin: 4vw 3vw;
   border: 10px double #607d8b;
   border-radius: 45px;
 }
@@ -42,10 +42,10 @@ h1 {
     color: #607d8b;
   }
   to {
-    font-size: 4.4vw;
-    color: rgb(192, 191, 191);
+    font-size: 4.2vw;
+    color: rgb(180, 164, 121);
     text-shadow: 0 0 10px #607d8b, 0 0 20px #607d8b, 0 0 30px #607d8b,
-      0 0 40px #607d8b, 0 0 50px #607d8b, 0 0 60px #607d8b;
+      0 0 40px #607d8b, 0 0 50px #607d8b;
   }
 }
 </style>

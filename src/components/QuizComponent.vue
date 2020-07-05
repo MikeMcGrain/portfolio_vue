@@ -63,7 +63,7 @@ export default {
       answerBtnDisabled: false,
       errored: false,
       dialog: false
-    }
+    };
   },
   methods: {
     startQuiz() {
@@ -172,9 +172,9 @@ export default {
         "https://opentdb.com/api.php?amount=5&category=18&difficulty=medium&type=multiple"
       )
       .then(response => (this.allQandA = response.data.results))
-      .catch(err => console.log(err))
+      .catch(err => console.log(err));
   }
-}
+};
 </script>
 
 <style scope>
