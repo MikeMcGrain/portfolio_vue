@@ -29,13 +29,13 @@ div {
 h1 {
   text-align: center;
   font-size: 4vw;
-  transform: scaleY(1.75);
+  transform: scaleY(1.5);
   padding-top: 20px;
   font-family: highSpeed;
   color: #607d8b;
-  -webkit-animation: glow 2s ease-in-out infinite alternate;
-  -moz-animation: glow 2s ease-in-out infinite alternate;
-  animation: glow 2s ease-in-out infinite alternate;
+  -webkit-animation: glow 3s ease-in-out infinite alternate;
+  -moz-animation: glow 3s ease-in-out infinite alternate;
+  animation: glow 3s ease-in-out infinite alternate;
 }
 
 #signature {
@@ -46,16 +46,13 @@ h1 {
 
 @-webkit-keyframes glow {
   from {
-    color: white;
-    text-shadow: 0 0 10px #9dc14c, 0 0 20px #9dc14c, 0 0 30px #9dc14c,
-      0 0 40px #9dc14c, 0 0 50px #9dc14c, 0 0 60px #9dc14c, 0 0 70px #9dc14c;
-  }
-
-  to {
     color: #607d8b;
-    text-shadow: 0 0 20px #9dc14c, 0 0 30px #9dc14c, 0 0 40px #9dc14c,
-      0 0 50px #9dc14c, 0 0 60px #9dc14c, 0 0 70px #9dc14c, 0 0 80px #9dc14c,
-      0 1 90px #9dc14c;
+  }
+  to {
+    font-size: 4.4vw;
+    color: rgb(192, 191, 191);
+    text-shadow: 0 0 10px #607d8b, 0 0 20px #607d8b, 0 0 30px #607d8b,
+      0 0 40px #607d8b, 0 0 50px #607d8b, 0 0 60px #607d8b;
   }
 }
 </style>
