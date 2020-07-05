@@ -2,13 +2,6 @@
   <div>
     <h1>Full-Stack Web Development</h1>
     <img id="signature" src="../assets/sig.png" alt="Mike McGrain signature" />
-    <!-- <img id="mevn" src="../assets/mevn2.jpeg" alt="MEVN stack logos" /> -->
-    <!-- <img id="mern" src="../assets/mern4.png" alt="MERN stack logos" /> -->
-    <!-- <p>
-      I'm a developer interested in creating full-stack JavaScript
-      applications for the web. Current focus lies in MEVN and MERN. I'm
-      also interested in Electron and NativeScript
-    </p>-->
   </div>
 </template>
 
