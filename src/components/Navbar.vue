@@ -12,13 +12,13 @@
 
       <v-btn-toggle mandatory>
         <router-link to="/">
-          <v-btn large class="hidden-sm-and-down">About</v-btn>
+          <v-btn class="hidden-sm-and-down">About</v-btn>
         </router-link>
         <router-link to="/work">
-          <v-btn large class="hidden-sm-and-down">Demo</v-btn>
+          <v-btn class="hidden-sm-and-down">Work</v-btn>
         </router-link>
         <router-link to="/contact">
-          <v-btn large class="hidden-sm-and-down">Contact</v-btn>
+          <v-btn class="hidden-sm-and-down">Contact</v-btn>
         </router-link>
       </v-btn-toggle>
 
@@ -54,7 +54,7 @@ export default {
       drawer: false,
       links: [
         { icon: "mdi-information", text: "About", route: "/" },
-        { icon: "mdi-wrench", text: "Demo", route: "/work" },
+        { icon: "mdi-wrench", text: "Work", route: "/work" },
         { icon: "mdi-email", text: "Contact", route: "/contact" }
       ]
     };

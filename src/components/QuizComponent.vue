@@ -1,7 +1,13 @@
 <template>
   <v-card raised min-height="180px">
-    <v-card-title class="align-end fill-height">{{ title }}</v-card-title>
-    <v-card-text>OpenTBD.com API</v-card-text>
+        <v-img class="white--text align-end" src="../assets/compScienceQuiz.png">
+    </v-img>
+
+    <v-card-subtitle
+      class="pb-0"
+    >Computer science questions pulled from OpenTBD.com API</v-card-subtitle>
+
+    <!-- <v-card-text>OpenTBD.com API</v-card-text> -->
     <v-card-actions v-if="introStage">
       <v-btn @click="startQuiz">Start</v-btn>
     </v-card-actions>

@@ -1,6 +1,14 @@
 <template>
   <v-card raised min-height="180px">
-    <v-card-title>Recommended Reading List</v-card-title>
+    <!-- <v-card-title>Recommended Reading List</v-card-title> -->
+    <v-img class="white--text align-end" src="../assets/books.jpeg">
+      <v-card-title>Recommended Reading</v-card-title>
+    </v-img>
+
+    <v-card-subtitle
+      class="pb-0"
+      >A CRUD component written to manipulate a MongoDB of books.
+    </v-card-subtitle>
     <v-card-text>This component connects to a MongoDB database on Atlas.com. CRUD operations are performed via an Express API.</v-card-text>
 
     <v-expansion-panels v-model="panel">
