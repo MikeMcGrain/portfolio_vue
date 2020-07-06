@@ -21,7 +21,7 @@ div {
 
 h1 {
   text-align: center;
-  font-size: 4vw;
+  font-size: 4.2vw;
   transform: scaleY(1.5);
   padding-top: 20px;
   font-family: highSpeed;
@@ -42,10 +42,10 @@ h1 {
     color: #607d8b;
   }
   to {
-    font-size: 4.2vw;
+    font-size: 4.4vw;
     color: rgb(180, 164, 121);
     text-shadow: 0 0 10px #607d8b, 0 0 20px #607d8b, 0 0 30px #607d8b,
-      0 0 40px #607d8b, 0 0 50px #607d8b;
+      0 0 40px #607d8b, 0 0 50px rgb(233, 191, 75);
   }
 }
 </style>
