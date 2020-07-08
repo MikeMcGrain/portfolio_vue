@@ -25,24 +25,24 @@
 </template>
 
 <script>
-import TwitterApp from "@/components/TwitterApp";
-import ExpenseTracker from "@/components/ExpenseTracker";
-import Snake from "@/components/Snake";
+import BNC from "@/components/BNC";
 import Calculator from "@/components/Calculator";
+import ExpenseTracker from "@/components/ExpenseTracker";
 import QuizComponent from "@/components/QuizComponent";
 import RecRead from "@/components/RecRead";
-import BNC from "@/components/BNC";
+import Snake from "@/components/Snake";
+import TwitterApp from "@/components/TwitterApp";
 
 export default {
   name: "work",
   components: {
-    TwitterApp,
-    ExpenseTracker,
-    Snake,
+    BNC,
     Calculator,
+    ExpenseTracker,
     QuizComponent,
     RecRead,
-    BNC
+    Snake,
+    TwitterApp
   }
 };
 </script>

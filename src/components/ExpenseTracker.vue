@@ -1,23 +1,17 @@
 <template>
-  <v-card raised>
+  <v-card raised min-height="410px">
     <v-img class="white--text align-end" src="../assets/expenseTracker1.png">
       <v-card-title>React Expense Tracker</v-card-title>
     </v-img>
-
-    <v-card-subtitle
-      class="pb-0"
-    >A simple expense tracker created using React and React-Bootstrap.</v-card-subtitle>
-
+    <v-card-title>Expense Tracker</v-card-title>
+    <v-card-subtitle class="pb-0">React | React-Bootstrap</v-card-subtitle>
     <v-card-text class="text--primary">
-      <div>It is true what they say: "React will make you a better JavaScripter". I've enjoyed using it, as well as Hooks and Context, to build this app. I'm looking forward to using it again in my next project.
-
-Bootstrap is a very convenient way to quickly make a presentable UI; however, I wish there were a way to use it without mucking up the markup so much.</div>
+      <div>A simple expense tracker created using React and React-Bootstrap.</div>
     </v-card-text>
-
     <v-card-actions>
-      <v-btn @click="openDemo">Try</v-btn>
-
-      <v-btn @click="openGitHub">Code</v-btn>
+      <v-spacer></v-spacer>
+      <v-btn class="button" @click="openDemo">Demo</v-btn>
+      <v-btn class="button" @click="openGitHub">Code</v-btn>
     </v-card-actions>
   </v-card>
 </template>
@@ -26,15 +20,22 @@ Bootstrap is a very convenient way to quickly make a presentable UI; however, I 
 export default {
   name: "ExpenseTracker",
   data() {
-    return {}
+    return {};
   },
   methods: {
     openDemo() {
       window.open("https://react-expensetracker.herokuapp.com/", "_blank");
     },
     openGitHub() {
-      window.open("https://github.com/MikeMcGrain/expense_tracker", "_blank")
+      window.open("https://github.com/MikeMcGrain/expense_tracker", "_blank");
     }
   }
 };
 </script>
+
+<style scoped>
+.button {
+  margin-top: 20%;
+  margin-right: 10px;
+}
+</style>

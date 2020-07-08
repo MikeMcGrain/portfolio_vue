@@ -1,17 +1,12 @@
 <template>
-  <v-card raised min-height="180px">
-        <v-img class="white--text align-end" src="../assets/compScienceQuiz.png">
-    </v-img>
-
-    <v-card-subtitle
-      class="pb-0"
-    >Computer science questions pulled from OpenTBD.com API</v-card-subtitle>
-
-    <!-- <v-card-text>OpenTBD.com API</v-card-text> -->
+  <v-card raised>
+    <v-img class="white--text align-end" src="../assets/compScienceQuiz.png"></v-img>
+    <v-card-subtitle class="pb-0">Vue.js | Vuetify | Axios</v-card-subtitle>
+    <v-card-text class="text--primary">Computer science questions pulled from OpenTBD.com API</v-card-text>
     <v-card-actions v-if="introStage">
-      <v-btn @click="startQuiz">Start</v-btn>
+      <v-spacer></v-spacer>
+      <v-btn class="button" @click="startQuiz">Start</v-btn>
     </v-card-actions>
-
     <v-dialog v-model="dialog" persistent max-width="600">
       <v-card>
         <div v-if="questionStage">
@@ -196,5 +191,10 @@ export default {
   font-size: 1.4rem;
   background-color: rgb(224, 95, 95);
   pointer-events: none;
+}
+
+.button {
+  margin-top: 0;
+  margin-right: 10px;
 }
 </style>

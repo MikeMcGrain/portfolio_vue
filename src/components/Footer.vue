@@ -1,6 +1,7 @@
 <template>
   <footer>
     <v-footer color="primary" app>
+      <span id="copyright" class="white--text">&copy; 2019</span>
       <v-spacer></v-spacer>
       <v-tooltip top>
         <template v-slot:activator="{ on, attrs }">
@@ -30,19 +31,10 @@
       </v-tooltip>
       <v-tooltip top>
         <template v-slot:activator="{ on, attrs }">
-          <v-icon 
-            @click="openGitHub" 
-            class="icon" 
-            x-large 
-            dark 
-            v-bind="attrs" 
-            v-on="on"
-            >mdi-github
-          </v-icon>
+          <v-icon @click="openGitHub" class="icon" x-large dark v-bind="attrs" v-on="on">mdi-github</v-icon>
         </template>
         <span>GitHub</span>
       </v-tooltip>
-      <span id="copyright" class="white--text">&copy; 2019</span>
     </v-footer>
   </footer>
 </template>
@@ -69,7 +61,7 @@ export default {
 
 <style scoped>
 .icon {
-  margin: 0px 8px;
+  margin: 0px 15px;
 }
 
 #copyright {

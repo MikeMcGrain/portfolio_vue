@@ -43,9 +43,9 @@ h1 {
   }
   to {
     font-size: 4.4vw;
-    color: rgb(180, 164, 121);
+    color: rgb(190, 172, 123);
     text-shadow: 0 0 10px #607d8b, 0 0 20px #607d8b, 0 0 30px #607d8b,
-      0 0 40px #607d8b, 0 0 50px rgb(233, 191, 75);
+      0 0 40px #607d8b, 0 0 50px yellow;
   }
 }
 </style>

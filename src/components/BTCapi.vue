@@ -1,5 +1,5 @@
 <template>
-  <v-card raised min-height="180px">
+  <v-card raised>
     <v-card-title class="align-end fill-height">{{ title }}</v-card-title>
     <v-card-text>Coindesk API, returns BTC prices</v-card-text>
     <v-card-actions>

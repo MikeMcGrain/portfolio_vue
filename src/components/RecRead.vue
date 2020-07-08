@@ -1,16 +1,10 @@
 <template>
-  <v-card raised min-height="180px">
-    <!-- <v-card-title>Recommended Reading List</v-card-title> -->
+  <v-card raised  min-height="410px">
     <v-img class="white--text align-end" src="../assets/books.jpeg">
       <v-card-title>Recommended Reading</v-card-title>
     </v-img>
-
-    <v-card-subtitle
-      class="pb-0"
-      >A CRUD component written to manipulate a MongoDB of books.
-    </v-card-subtitle>
-    <v-card-text>This component connects to a MongoDB database on Atlas.com. CRUD operations are performed via an Express API.</v-card-text>
-
+    <v-card-subtitle>Vue.js | Vuetify | Node | Express | MongoDB</v-card-subtitle>
+    <v-card-text class="text--primary">Connects to a MongoDB database on Atlas.com. CRUD operations are performed via an Express API.</v-card-text>
     <v-expansion-panels v-model="panel">
       <v-expansion-panel>
         <v-expansion-panel-header>Click to view book list</v-expansion-panel-header>
@@ -49,7 +43,6 @@
         </v-expansion-panel-content>
       </v-expansion-panel>
     </v-expansion-panels>
-
     <v-dialog v-model="dialog" max-width="600">
       <v-card>
         <v-card-title class="primary white--text">Add a book to the list</v-card-title>
@@ -66,7 +59,6 @@
         </v-card-actions>
       </v-card>
     </v-dialog>
-
     <v-dialog v-model="dialog2" max-width="600">
       <v-card>
         <v-card-title class="primary white--text">Change book info</v-card-title>
